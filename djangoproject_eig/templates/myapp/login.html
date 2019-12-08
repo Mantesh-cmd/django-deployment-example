@@ -1,0 +1,20 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+ 
+<div class = 'container'> 
+  <div class = 'jumbotron'>
+  	<h1>LOGIN HERE</h1>
+  	<form action = "{% url 'lg_app:user_login' %}" method = 'POST'>
+  		{% csrf_token %}
+  		<label for='username'>USERNAME</label>
+  		<input type="text" name="username" placeholder="Enter username">
+  		<label for = 'password'>PASSWORD</label>
+  		<input type="password" name='password'>
+  		<button type="Submit" class="btn btn-primary">LOGIN</button>
+  	</form>
+
+  </div>
+</div>
+
+
+{% endblock %}
